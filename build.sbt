@@ -1,4 +1,4 @@
-name := "scala_code_judger_api"
+name := "scala_code_judge_api"
 
 version := "1.0-SNAPSHOT"
 
