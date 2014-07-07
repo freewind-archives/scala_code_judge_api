@@ -16,7 +16,7 @@ technology stack
 Kanban:
 ========
 
-https://trello.com/b/SPR8Jex3/scala-code-judge-api
+https://huboard.com/tw-scala-workshop/scala_code_judge_api
 
 CI
 ======
