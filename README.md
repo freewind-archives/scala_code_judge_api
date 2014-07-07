@@ -26,7 +26,7 @@ http://jenkins.shuzu.org:8080/job/scala_code_judge_api/
 Demo
 =====
 
-http://shuzu.org:10003
+http://scala-code-judge-api.herokuapp.com
 
 Usage
 =====
