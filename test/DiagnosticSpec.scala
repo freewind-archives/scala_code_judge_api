@@ -19,5 +19,10 @@ class DiagnosticSpec extends Specification {
 
       status(home) must equalTo(OK)
     }
+
+    "render the home page" in new WithApplication{
+      val name = route(FakeRequest(GET, "/diagnostic/name")).get
+      status(name) must equalTo(OK)
+    }
   }
 }

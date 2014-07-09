@@ -10,4 +10,10 @@ object Diagnostic extends Controller {
   def ping = Action {
     Ok
   }
+
+  def name = Action {
+    Ok("Scala Code Judge Api")
+  }
+
+
 }
