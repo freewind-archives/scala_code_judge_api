@@ -1,6 +1,6 @@
 #!/bin/bash
 
-heroku apps:destroy scala-code-judge-api --confirm
+heroku apps:destroy -a scala-code-judge-api --confirm scala-code-judge-api
 heroku apps:create scala-code-judge-api
 
 git checkout master
