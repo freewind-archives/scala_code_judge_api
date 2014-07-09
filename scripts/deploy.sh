@@ -4,7 +4,7 @@ heroku apps:destroy -a scala-code-judge-api --confirm scala-code-judge-api
 heroku apps:create scala-code-judge-api
 
 # commit build_version in another branch
-git branch -d heroku 2>/dev/null
+git branch -D heroku 2>/dev/null
 git branch heroku
 git checkout heroku
 
@@ -17,4 +17,4 @@ git push heroku master
 
 # ckeckout to master and remove heorku branch
 git checkout master
-git branch -d heroku
+git branch -D heroku
