@@ -3,13 +3,18 @@
 heroku apps:destroy -a scala-code-judge-api --confirm scala-code-judge-api
 heroku apps:create scala-code-judge-api
 
-git status
-git checkout master
+# commit build_version in another branch
+git branch -d heroku 2>/dev/null
+git branch heroku
+git checkout heroku
 
-git status
-git add build_version
+git add build_version -f
 git commit -m "update build_version file"
 
-git remote add heroku git@heroku.com:scala-code-judge-api.git
-git status
+# push latest code to heroku with build_version
+git remote add heroku git@heroku.com:scala-code-judge-api.git 2>/dev/null
 git push heroku master
+
+# ckeckout to master and remove heorku branch
+git checkout master
+git branch -d heroku
