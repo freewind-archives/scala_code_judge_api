@@ -1,11 +1,8 @@
 package controllers
 
 import play.api.mvc._
+import play.libs.Json
 
-
-/**
- * Created by coney on 7/9/14.
- */
 object Diagnostic extends Controller {
   def ping = Action {
     Ok
@@ -14,6 +11,4 @@ object Diagnostic extends Controller {
   def name = Action {
     Ok("Scala Code Judge Api")
   }
-
-
 }

@@ -23,6 +23,7 @@ class DiagnosticSpec extends Specification {
     "render the home page" in new WithApplication{
       val name = route(FakeRequest(GET, "/diagnostic/name")).get
       status(name) must equalTo(OK)
+      contentAsString(name) must equalTo("Scala Code Judge Api")
     }
   }
 }
