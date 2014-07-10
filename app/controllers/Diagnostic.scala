@@ -1,11 +1,10 @@
 package controllers
 
 import play.api.mvc._
-import play.libs.Json
 
 object Diagnostic extends Controller {
   def ping = Action {
-    Ok
+    Ok("ok")
   }
 
   def name = Action {

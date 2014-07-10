@@ -14,10 +14,11 @@ class DiagnosticSpec extends Specification {
 
   "Diagnostic" should {
 
-    "render the index page" in new WithApplication{
-      val home = route(FakeRequest(GET, "/diagnostic/ping")).get
+    "render the ping page with 200 OK" in new WithApplication{
+      val pingResponse = route(FakeRequest(GET, "/diagnostic/ping")).get
 
-      status(home) must equalTo(OK)
+      status(pingResponse) must equalTo(OK)
+      contentAsString(pingResponse) must equalTo("ok")
     }
 
     "render the home page" in new WithApplication{
