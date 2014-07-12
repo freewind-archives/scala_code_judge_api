@@ -15,7 +15,7 @@ git commit -m "update build_version file"
 
 # push latest code to heroku with build_version
 git remote add heroku git@heroku.com:${PROJECT}.git 2>/dev/null
-#git push heroku master
+# git push heroku master
 git push -u heroku heroku:master
 
 # ckeckout to master and remove heorku branch
