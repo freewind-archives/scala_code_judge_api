@@ -1,6 +1,7 @@
 import org.junit.runner._
 import org.specs2.mutable._
 import org.specs2.runner._
+import play.api.libs.json.Json
 import play.api.test.Helpers._
 import play.api.test._
 
@@ -25,6 +26,15 @@ class DiagnosticSpec extends Specification {
       val name = route(FakeRequest(GET, "/diagnostic/name")).get
       status(name) must equalTo(OK)
       contentAsString(name) must equalTo("Scala Code Judge Api")
+    }
+
+    "render the hello page" in running(FakeApplication()){
+      val username = "test json"
+      val json = Json.obj("name" -> username)
+      val Some(helloInfo) = route(FakeRequest(POST, "/diagnostic/hello").withJsonBody(json))
+
+      status(helloInfo) must equalTo(OK)
+      contentAsJson(helloInfo) must equalTo(Json.obj("hello" -> username))
     }
   }
 }
